@@ -11,7 +11,7 @@ A obstacle game developed with HTML, CSS, and JavaScript that I had as a project
 - **Conclusions:** JERBOchallenge was one of my first programming projects, making it a valuable learning experience to solidify foundations.
 
 Get ready for an exciting adventure, JERBOchallenge ATR! 👨‍💻✔️
-## Tecnologías - Programming languages
+## Tecnologías
 - HTML
 - CSS
 -Javascript
