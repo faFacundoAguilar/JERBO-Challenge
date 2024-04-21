@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mapa.css">
+    <title>Jumpymals</title>
+</head>
+
+<body style="background-image: url('../recursos/jumpymals.jpg'); background-size: contain;">
+    <div id="mapa-main">
+        <div id="contenedor-mapa">
+
+        </div>
+
+        <div id="menu_arriba">
+            <div id="corazones">
+
+                <!-- <img src="../recursos/corazon.png" alt="contador vidas una vida">
+                <img src="../recursos/corazon.png" alt="contador vidas dos vidas">
+                <img src="../recursos/corazon.png" alt="contador vidas tres vidas"> -->
+            </div>
+
+            <div id="cerrar">X</div>
+
+            <div id="nivel">
+                <p>Nivel <span id="mostrar-nivel"></span></p>
+            </div>
+
+            <div id="monedas">
+                <img src="../recursos/monedas.png" alt="" />
+                <p><span id="mostrar-monedas">0</span></p>
+
+            </div>
+        </div>
+
+        <div id="confirmar_salir">
+            <p>¿Seguro que quieres salir?</p>
+            <div>
+                <button id="salir">Si, salir</button>
+                <button id="continuar">No, continuar</button>
+            </div>
+
+        </div>
+
+        <div id="perder_vida">
+
+        </div>
+
+        <div id="margen-izq"></div>
+        <div id="margen-drch"></div>
+
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var boton_cerrar = document.getElementById('cerrar');
+            var confirmacion = document.getElementById('confirmar_salir');
+            confirmacion.style.display = "none";
+            var boton_continuar = document.getElementById('continuar');
+            var boton_salir = document.getElementById('salir');
+            boton_cerrar.onclick = () => {
+                confirmacion.style.display = "block";
+                console.log(confirmacion.display);
+            };
+            boton_continuar.onclick = () => {
+                confirmacion.style.display = "none";
+            };
+            boton_salir.onclick = () => {
+                window.location.href = "MenuInicio.html";
+            };
+        });
+    </script>
+
+<script src="../utilidades/utilidades.js" defer></script>
+<script src="../utilidades/localstorage.js" defer></script>
+<script src="../clases/casilla.js" defer></script>
+<script src="../clases/mapa.js" defer></script>
+<script src="../clases/moneda.js" defer></script>
+<script src="../clases/enemigo.js" defer></script>
+<script src="../clases/personaje.js" defer></script>
+
+<script src="../main/main.js" defer></script>
+</body>
+
+</html>

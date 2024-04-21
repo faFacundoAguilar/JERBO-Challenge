@@ -1,0 +1,155 @@
+@font-face {
+	font-family: KeeponTruckin;
+	src: url(../recursos/KeeponTruckin.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#mapa-main {
+	padding-left: 0.5%;
+	position: relative;
+	top: 40px;
+}
+
+#contenedor-mapa {
+	width: 96%;
+	margin-left: 1.2%;
+	margin: 10px auto;
+	position: relative;
+}
+
+#div_casilla_0_0 {
+	background: url('recursos/carretera.png');
+
+}
+
+#corazones {
+	display: flex;
+	position: fixed;
+	top: 1px;
+	height: 45px;
+	width: 45px;
+	margin-left: 4.3%;
+	filter: drop-shadow(3px 3px 0 black) drop-shadow(-1px -1px 5px black);
+}
+
+#nivel {
+	font-family: KeeponTruckin;
+	top: 10px;
+    margin-left: 86%;
+	display: flex;
+	position: fixed;
+	font-size: 25px;
+	font-weight: 900;
+	/* background-color: rgba(255, 255, 255, 0.727); */
+	padding: 4px 10px;
+	color: orange;
+}
+
+
+#monedas {
+	display: flex;
+	position: fixed;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	margin-left: 15.5%;
+}
+
+#mostrar-monedas {
+	font-family: KeeponTruckin;
+	font-size: 35px;
+	margin-left: 10px;
+	color: orange;
+}
+
+#numero_monedas {
+	top: 20px;
+	margin-left: 60px;
+	position: absolute;
+	font-size: 22px;
+}
+
+#cerrar {
+	display: flex;
+	position: fixed;
+	top: 6px;
+	margin-left: 95.3%;
+	font-family: KeeponTruckin;
+	font-size: 30px;
+	font-weight: 100;
+	color: rgb(210, 187, 248);
+}
+
+#cerrar:hover {
+	color: rgba(139,93,208, 0.619);
+	cursor: pointer;
+}
+
+#confirmar_salir {
+	position: absolute;
+	left: 40%;
+	width: 20%;
+	height: 180px;
+	top: 10%;
+	background: rgba(250,235,215,1);
+	border: 8px double rgb(79, 41, 145);
+	font-family: KeeponTruckin;
+}
+
+#confirmar_salir p {
+	text-align: center;
+	margin-top: 10%;
+	font-size: 24px;
+}
+
+#confirmar_salir button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 5px;
+	margin-top: 16%;
+	font-family: KeeponTruckin;
+
+}
+
+#confirmar_salir button:hover {
+	background-color: rgba(139,93,208, 0.619);
+}
+
+#confirmar_salir>div {
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: space-around;
+}
+
+#perder_vida{
+	top: 0px;
+	left: 0px;
+	background-color: rgba(65, 26, 3, 0.296);
+	width: 100%;
+	height: 100%;
+    position: absolute;
+	visibility: hidden;
+}
+
+#margen-izq{
+	width: 38px;
+    height: 1462px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	box-shadow: -10px -8px 5px #31256d9e inset;
+}
+#margen-drch{
+	width: 38px;
+    height: 1462px;
+    position: absolute;
+    left: 97.6%;
+    top: 0px;
+	box-shadow: 10px 8px 5px #31256d9e inset;
+}

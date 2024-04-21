@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección Personaje</title>
+    <script src="../utilidades/localstorage.js" defer></script>
+    <script src="../utilidades/utilidades.js" defer></script>
+
+    <style>
+        .tabla {
+            margin: 0 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../css/seleccionPersonaje.css">
+
+    <div class="titulo">
+        <center>
+            <h1>SELECCIONA UN PERSONAJE</h1>
+        </center>
+    </div>
+    <br>
+    <div class="tabla">
+
+        <div id="p1" class="personaje1">
+            <center>
+                <h2 id="titulopersonaje1">JERBO</h2>
+                <img id="jerbo" src="../recursos/jerbo_buy.gif">
+            </center>
+        </div>
+
+        <div id="p2" class="personaje2">
+            <center>
+                <h2 id="titulopersonaje2">TANUKI</h2>
+                <img id="tanuki" src="../recursos/tanuki_buy.gif">
+            </center>
+            <div style="text-align: center;">
+                <span id="comprar1"
+                    style="font-size: 15px; margin-right: 10px; color: rgb(158, 238, 9); visibility: hidden;">Comprar
+                </span>
+                <span id="cash" style="font-size: 30px;">50</span>
+                <img id="moneda_img" src="../recursos/monedas.png" alt="monedas" style="width: 30px;">
+                <span id="comprar2"
+                    style="font-size: 15px; margin-right: 10px; color: rgb(158, 238, 9); visibility: hidden;">Comprar
+                </span>
+            </div>
+        </div>
+
+        <div id="p3" class="personaje3">
+            <center>
+                <h2 id="titulopersonaje3">MAGNEMITE</h2>
+                <img id="magnemite" src="../recursos/magnemite2.gif">
+            </center>
+            <div style="text-align: center;">
+                <span id="comprar3"
+                    style="font-size: 15px; margin-right: 10px; color: rgb(158, 238, 9); visibility: hidden;">Comprar
+                </span>
+                <span id="cash2" style="font-size: 30px;">100</span>
+                <img id="moneda_img2" src="../recursos/monedas.png" alt="monedas" style="width: 30px;">
+                <span id="comprar4"
+                    style="font-size: 15px; margin-right: 10px; color: rgb(158, 238, 9); visibility: hidden;">Comprar
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <button class="jugar_boton"><a href="mapa.html">Jugar</a></button>
+    </div>
+
+    <div id="confirmar_salir"  class="conf_salir">
+        <p>Desbloquear:</p>
+        <p>50 monedas</p>
+        <div>
+            <button id="continuar" class="continuar">Si, continuar</button>
+            <button id="salir" class="salir">No, cancelar</button>
+        </div>
+
+    </div>
+
+    <div id="confirmar_salir2" class="conf_salir">
+        <p>Desbloquear:</p>
+        <p>100 monedas</p>
+        <div>
+            <button id="continuar2" class="continuar">Si, continuar</button>
+            <button id="salir2" class="salir">No, cancelar</button>
+        </div>
+
+    </div>
+
+    <script>
+        // salir 
+        document.addEventListener('keydown', (event) => {
+            if (event.key == 'Escape') {
+                window.location.href = 'MenuInicio.html';
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var cambiar_personaje2 = false;
+            var cambiar_personaje3 = false;
+            var monedas = JSON.parse(localStorage.getItem('guardado'))["monedas"];
+            var confirmar_salir = document.getElementById('confirmar_salir');
+            confirmar_salir.style.display = "none";
+            var confirmar_salir2 = document.getElementById('confirmar_salir2');
+            confirmar_salir2.style.display = "none";
+            var salir = document.getElementById('salir');
+            var continuar = document.getElementById('continuar');
+            var salir2 = document.getElementById('salir2');
+            var continuar2 = document.getElementById('continuar2');
+            var p1 = document.getElementById('p1');
+            var imagen_p1 = document.getElementById('jerbo');
+            if (monedas >= 50) {
+                var p2 = document.getElementById('p2');
+                var imagen_p2 = document.getElementById('tanuki');
+                var comprar1 = document.getElementById('comprar1');
+                var comprar2 = document.getElementById('comprar2');
+                var cash = document.getElementById('cash');
+                var moneda_img = document.getElementById('moneda_img');
+                console.log(comprar1, comprar2);
+                comprar1.style.visibility = "visible";
+                comprar2.style.visibility = "visible";
+
+                comprar1.style.cursor = "pointer";
+                comprar2.style.cursor = "pointer";
+                cash.style.cursor = "pointer";
+                moneda_img.style.cursor = "pointer";
+
+                imagen_p2.addEventListener('click', comprar);
+                comprar1.addEventListener('click', comprar);
+                comprar2.addEventListener('click', comprar);
+                cash.addEventListener('click', comprar);
+                moneda_img.addEventListener('click', comprar);
+            }
+
+            if (monedas >= 100) {
+                var p3 = document.getElementById('p3');
+                var imagen_p3 = document.getElementById('magnemite');
+                var comprar3 = document.getElementById('comprar3');
+                var comprar4 = document.getElementById('comprar4');
+                var cash2 = document.getElementById('cash2');
+                var moneda_img2 = document.getElementById('moneda_img2');
+                console.log(comprar3, comprar4);
+                comprar3.style.visibility = "visible";
+                comprar4.style.visibility = "visible";
+
+                comprar3.style.cursor = "pointer";
+                comprar4.style.cursor = "pointer";
+                cash.style.cursor = "pointer";
+                moneda_img.style.cursor = "pointer";
+
+                p3.addEventListener('click', comprar_dos);
+                imagen_p3.addEventListener('click', comprar_dos);
+                comprar3.addEventListener('click', comprar_dos);
+                comprar4.addEventListener('click', comprar_dos);
+                cash2.addEventListener('click', comprar_dos);
+                moneda_img2.addEventListener('click', comprar_dos);
+            }
+
+            function comprar() {
+                if (cambiar_personaje2 == false) {
+                    confirmar_salir.style.display = "block";
+                }
+            }
+            function comprar_dos() {
+                if (cambiar_personaje3 == false) {
+                    confirmar_salir2.style.display = "block";
+                }
+            }
+            salir.addEventListener('click', () => {
+                confirmar_salir.style.display = "none";
+            });
+            salir2.addEventListener('click', () => {
+                confirmar_salir2.style.display = "none";
+            });
+            continuar.addEventListener('click', () => {
+                p2.style.backgroundColor = "rgba(250,235,215,1)";
+                imagen_p2.style.filter = "opacity(1)";
+                comprar1.style.visibility = "hidden";
+                comprar2.style.visibility = "hidden";
+                cash.style.visibility = "hidden";
+                moneda_img.style.visibility = "hidden";
+                confirmar_salir.style.display = "none";
+
+                var guardado = JSON.parse(localStorage.getItem('guardado'));
+                guardado["personaje"] = "tanuki";
+                guardado["p2"] = true;
+                localStorage.setItem('guardado', JSON.stringify(guardado));
+
+                cambiar_personaje2 = true;
+                p1.style.border = "4px solid black";
+                p2.style.border = "10px double RGB(112,59,206)";
+                p3.style.border = "4px solid black";
+            });
+            continuar2.addEventListener('click', () => {
+                p3.style.backgroundColor = "rgba(250,235,215,1)";
+                imagen_p3.style.filter = "opacity(1)";
+                comprar3.style.visibility = "hidden";
+                comprar4.style.visibility = "hidden";
+                cash2.style.visibility = "hidden";
+                moneda_img2.style.visibility = "hidden";
+                confirmar_salir2.style.display = "none";
+
+                var guardado = JSON.parse(localStorage.getItem('guardado'));
+                guardado["personaje"] = "magnemite";
+                guardado["p3"] = true;
+                localStorage.setItem('guardado', JSON.stringify(guardado));
+
+                cambiar_personaje3 = true;
+                p1.style.border = "4px solid black";
+                p2.style.border = "4px solid black";
+                p3.style.border = "10px double RGB(112,59,206)";
+            });
+
+            imagen_p1.addEventListener('click', () => {
+                console.log(p1.style.border);
+                var guardado = JSON.parse(localStorage.getItem('guardado'));
+                guardado["personaje"] = "jerbo";
+                localStorage.setItem('guardado', JSON.stringify(guardado));
+                p1.style.border = "10px double RGB(112,59,206)";
+                p2.style.border = "4px solid black";
+                p3.style.border = "4px solid black";
+            });
+            imagen_p2.addEventListener('click', () => {
+                console.log("p2");
+                if (cambiar_personaje2 == true) {
+                    var guardado = JSON.parse(localStorage.getItem('guardado'));
+                    guardado["personaje"] = "tanuki";
+                    localStorage.setItem('guardado', JSON.stringify(guardado));
+                    p1.style.border = "4px solid black";
+                    p2.style.border = "10px double RGB(112,59,206)";
+                    p3.style.border = "4px solid black";
+                }
+            });
+            imagen_p3.addEventListener('click', () => {
+                console.log("p3");
+                if (cambiar_personaje3 == true) {
+                    var guardado = JSON.parse(localStorage.getItem('guardado'));
+                    guardado["personaje"] = "magnemite";
+                    localStorage.setItem('guardado', JSON.stringify(guardado));
+                    p1.style.border = "4px solid black";
+                    p2.style.border = "4px solid black";
+                    p3.style.border = "10px double RGB(112,59,206)";
+                }
+            });
+
+            function p2Desbloqueado() {
+                var p2_desbloqueado = JSON.parse(localStorage.getItem('guardado'))["p2"];
+                if (p2_desbloqueado == true) {
+                    cambiar_personaje2 = true;
+                    p2.style.backgroundColor = "rgba(250,235,215,1)";
+                    imagen_p2.style.filter = "opacity(1)";
+                    comprar1.style.visibility = "hidden";
+                    comprar2.style.visibility = "hidden";
+                    cash.style.visibility = "hidden";
+                    moneda_img.style.visibility = "hidden";
+                    confirmar_salir.style.display = "none";
+                }
+            }
+            p2Desbloqueado();
+
+            function p3Desbloqueado() {
+                var p3_desbloqueado = JSON.parse(localStorage.getItem('guardado'))["p3"];
+                if (p3_desbloqueado == true) {
+                    cambiar_personaje3 = true;
+                    p3.style.backgroundColor = "rgba(250,235,215,1)";
+                    imagen_p3.style.filter = "opacity(1)";
+                    comprar3.style.visibility = "hidden";
+                    comprar4.style.visibility = "hidden";
+                    cash2.style.visibility = "hidden";
+                    moneda_img2.style.visibility = "hidden";
+                    confirmar_salir2.style.display = "none";
+                }
+            }
+            p3Desbloqueado();
+
+            var p_activo = JSON.parse(localStorage.getItem('guardado'))["personaje"];
+            if (p_activo == "tanuki") {
+                p1.style.border = "4px solid black";
+                p2.style.border = "10px double RGB(112,59,206)";
+                p3.style.border = "4px solid black";
+            } else if (p_activo == "jerbo") {
+                p1.style.border = "10px double RGB(112,59,206)";
+                p2.style.border = "4px solid black";
+                p3.style.border = "4px solid black";
+            } else if (p_activo == "magnemite") {
+                p1.style.border = "4px solid black";
+                p2.style.border = "4px solid black";
+                p3.style.border = "10px double RGB(112,59,206)";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

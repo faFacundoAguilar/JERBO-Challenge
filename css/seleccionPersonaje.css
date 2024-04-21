@@ -1,0 +1,206 @@
+@font-face {
+    font-family: KeeponTruckin;
+    src: url(../recursos/KeeponTruckin.ttf);
+}
+
+.titulo {
+    font-family: KeeponTruckin;
+    font-size: 30px;
+    -webkit-text-stroke: .7px rgb(204 107 158);
+    text-shadow: 0.2em 0.2em 0.2em black, 0.2em 0.2em 0em rgba(204, 107, 159, 0.753);
+}
+
+body {
+    background-color: rgb(236, 215, 232);
+    background-image: url('../recursos/jumpymals.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personaje1 {
+    font-family: KeeponTruckin;
+    font-size: 18px;
+    display: inline-block;
+    text-align: left;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(250, 235, 215, 1);
+    padding: 50px;
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+.personaje2 {
+    font-family: KeeponTruckin;
+    font-size: 14px;
+    display: inline-block;
+    text-align: left;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(250, 235, 215, 0.5);
+    padding: 31px 50px;
+    margin-left: 110px;
+    border: 4px solid black;
+    border-radius: 15px;
+
+}
+
+.personaje3 {
+    font-family: KeeponTruckin;
+    font-size: 14px;
+    display: inline-block;
+    text-align: left;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(250, 235, 215, 0.5);
+    padding: 31px 50px;
+    margin-left: 110px;
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+
+#titulopersonaje1 {
+    text-align: center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+
+}
+
+#titulopersonaje2 {
+    text-align: center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+    margin-bottom: -10px;
+}
+
+#titulopersonaje3 {
+    text-align: center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+    margin-bottom: -10px;
+}
+
+#incognita {
+    text-align: center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+}
+
+#jerbo {
+    width: 210px;
+    height: 230px;
+    cursor: pointer;
+}
+
+#tanuki {
+    width: 230px;
+    height: 230px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    filter: opacity(0.5);
+}
+
+#magnemite {
+    width: 244px;
+    height: 230px;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    filter: opacity(0.5);
+}
+
+#incognita {
+    font-size: 112px;
+}
+
+#cerrar {
+    display: flex;
+    position: fixed;
+    top: 6px;
+    margin-left: 95.3%;
+    font-family: KeeponTruckin;
+    font-size: 30px;
+    font-weight: 100;
+    color: rgb(210, 187, 248);
+}
+
+#cerrar:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.conf_salir {
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: 180px;
+    top: 70%;
+    background: #eadada;
+    border: 8px double black;
+    font-family: KeeponTruckin;
+    border-radius: 20px;
+
+}
+
+.conf_salir p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.conf_salir button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    font-family: KeeponTruckin;
+}
+
+.conf_salir button:hover {
+    background-color: rgba(150, 83, 212, 0.619);
+}
+
+.conf_salir>div {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+}
+
+#confirmar_salir2{
+    left: 70.6%;
+}
+
+.jugar_boton {
+    width: 20%;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 14px;
+    background-color: rgb(176, 77, 130);
+
+    text-transform: uppercase;
+    font-size: 50px;
+    cursor: pointer;
+    font-family: KeeponTruckin;
+}
+
+.jugar_boton a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: inherit;
+    line-height: 100px;
+}

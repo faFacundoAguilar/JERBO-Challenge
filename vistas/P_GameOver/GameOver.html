@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOver</title>
+
+    <style>
+    @font-face {
+        font-family:KeeponTruckin ;
+        src: url(KeeponTruckin.ttf);
+    }
+.Div {
+width: 400px;
+height: 5px;
+border: 1px black;
+border-radius: 50px  ;
+padding-top: 3%;
+background-color: antiquewhite;
+margin-bottom: 40px;
+text-align: center;
+padding-bottom: 5%;
+font-family: KeeponTruckin;
+cursor: pointer;
+font-size: 35px;
+transition: all 0.4s ease;
+border: solid 1px black;
+}
+
+.retry{
+  margin-top: -90px !important;
+}
+
+.Div:hover {
+background-color: rgb(218, 39, 39);
+color: white;
+}
+
+#DivPrin {
+width: 500px;
+height: 5px;
+color:  rgb(218, 39, 39);
+text-align: center;
+padding-bottom: 400px;
+float:none;
+font-family: KeeponTruckin;
+font-size: 80px;
+margin-bottom: 90px;
+
+}
+
+video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 105%;
+min-height: 100%;
+transform: translateX(calc((100% - 100vw) / 2));
+z-index: -2;
+}
+body {
+position: relative;
+margin: 0;
+}
+#MonedasContador {
+
+width: 100px;
+height: 35px;
+padding-top: 3%;
+float: left;
+padding-top: 20px;
+border-radius: 4%;
+padding-bottom: 15px;
+font-size: 40px;
+padding-bottom: 15px;
+margin-left: 20px;
+border: 1px solid black;
+font-family: KeeponTruckin;
+background-color: antiquewhite;
+
+}
+#Ajustes {
+
+width: 100px;
+height: 35px;
+padding-top: 3%;
+float: left;
+padding-top: 20px;
+border-radius: 4%;
+padding-bottom: 15px;
+font-size: 40px;
+padding-bottom: 15px;
+margin-left: 20px;
+border: 1px solid black;
+font-family: KeeponTruckin;
+background-color: antiquewhite;
+
+}
+img {
+
+width: 500px;
+height: 500px;
+margin-top: -60px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+</style>
+</head>
+<body> <center>
+
+<video src="Video_fondo.mp4" autoplay="true" muted="true" loop="true" ></video>
+
+<div id="DivPrin"><img src="Gm.jpg"></div>
+<div class="Div retry"><a href="../mapa.html">Reintentar</a></div>
+<div class="Div"><a href="../SeleccionPersonaje.html">Menu de personajes</a></div>
+<div class="loading show">
+<div class="spin"></div>
+</div>
+</center>
+
+<script>
+
+  document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+      setTimeout(() => {
+        window.location.href = '../mapa.html';
+      }, 200);  
+      
+    }
+  });
+  
+  
+      </script>
+</body>
+</html>

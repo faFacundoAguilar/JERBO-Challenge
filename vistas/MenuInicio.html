@@ -1,0 +1,290 @@
++
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpymals</title>
+    <style>
+        @font-face {
+            font-family: 'KeeponTruckin';
+            src: url('../recursos/KeeponTruckin.ttf');
+            font-family: 'KeeponTruckin';
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            color: rgb(72, 25, 58);
+            text-shadow: 0.1em 0.1em 0em rgba(204, 107, 159, 0.753),
+                0.075em 0.075em 0em rgba(152, 68, 113, 0.753),
+                0.05em 0.05em 0em rgba(86, 23, 56, 0.753),
+                0.025em 0.025em 0em rgba(44, 9, 27, 0.753);
+        }
+
+        .Div {
+            width: 500px;
+            height: 5px;
+            border: 1px black;
+            border-radius: 50px;
+            padding-top: 3%;
+            background-color: rgb(226 206 166);
+            ;
+            margin-top: 50px;
+            text-align: center;
+            padding-bottom: 5%;
+            font-family: 'KeeponTruckin';
+            cursor: pointer;
+            font-size: 45px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            border: solid 1px black;
+        }
+
+        .Div:hover {
+            background-color: #703BCE;
+            color: white;
+            cursor: pointer;
+        }
+
+        #DivPrin {
+            width: 500px;
+            height: 5px;
+            margin-top: 10px;
+            text-align: center;
+            padDing-bottom: 5%;
+            font-family: 'KeeponTruckin';
+            font-size: 80px;
+            color: rgb(238, 196, 42);
+            border-radius: 100px;
+
+            text-shadow: 5px 5px 4px rgba(238, 195, 42, 0.422),
+                1px 1px 0px black;
+        }
+
+        .Div:hover a {
+            color: white;
+        }
+
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 105%;
+            min-height: 100%;
+            transform: translateX(calc((100% - 100vw) / 2));
+            z-index: -2;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+        }
+
+        #MonedasContador {
+
+            width: 200px;
+            height: 35px;
+            padding-top: 3%;
+            float: left;
+            padding-top: 20px;
+            border-radius: 16%;
+            padding-bottom: 15px;
+            font-size: 40px;
+            padding-bottom: 15px;
+            margin-left: 20px;
+            border: 1px solid black;
+            font-family: 'KeeponTruckin';
+            background-color: rgba(250, 235, 215, 0.699);
+        }
+
+        #MonedasContador:hover a {
+            color: white;
+        }
+
+        #Ajustes {
+
+            width: 100px;
+            height: 35px;
+            float: left;
+            padding-top: 20px;
+            border-radius: 16%;
+            padding-bottom: 15px;
+            font-size: 40px;
+            padding-bottom: 15px;
+            margin-left: 20px;
+            border: 1px outset black;
+            font-family: 'KeeponTruckin';
+            background-color: rgba(250, 235, 215, 0.688);
+
+        }
+
+        .bot2 {
+            box-shadow: 1px 1px 0px hsl(60.17deg 86.48% 50.75%),
+                2px 2px 0px hsl(41, 87%, 55%),
+                3px 3px 0px hsl(279.69deg 63.6% 69.13%),
+                4px 4px 1px hsl(295.8deg 74.7% 64.63%),
+                5px 5px 3px hsl(307.89deg 82.35% 30.46%),
+
+                -2px 1px 0px hsl(41, 87%, 55%);
+            border: 1px solid hsl(41, 87%, 55%);
+        }
+
+        .bot2:hover {
+            box-shadow: none;
+            margin-top: 50px;
+            margin-left: 20px;
+            border: 3px inset rgba(195, 199, 201, 0.622);
+        }
+
+        .bot {
+            box-shadow: 1px 1px 0px hsl(60.17deg 86.48% 50.75%),
+                2px 2px 0px hsl(41, 87%, 55%),
+                -2px 1px 0px hsl(41, 87%, 55%),
+                3px 3px 5px hsl(44, 73%, 45%) 7px 7px 5px hsl(44, 83%, 20%);
+            border: 1px solid hsl(41, 87%, 55%);
+        }
+
+        .bot:hover {
+            box-shadow: none;
+            border: 1px inset #ffffff !important;
+            background-color: #703BCE !important;
+            transition: 300ms all;
+        }
+
+        #Ajustes:hover img {
+            width: 50px;
+            height: 50px;
+        }
+
+        #Ajustes:hover {
+            padding-top: 10px;
+            padding-bottom: 25px;
+        }
+
+        .botones {
+            cursor: pointer;
+        }
+
+        img {
+
+            width: 25px;
+            height: 25px;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1s all;
+            opacity: 0;
+        }
+
+        .loading.show {
+            opacity: 1;
+        }
+
+        .loading .spin {
+            border: 3px solid hsla(185, 100%, 62%, 0.2);
+            border-top-color: #c5189f;
+            border-radius: 50%;
+            width: 3em;
+            height: 3em;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <video src="Video_fondo.mp4" autoplay="true" muted="true" loop="true"></video>
+        <div id="MonedasContador" class="botones bot"><a href="../vistas/creditos/CREDITOS.html">Creditos</a></div>
+        <div id="Ajustes" class="botones bot"><img src="../recursos/Ajustes.png"></div>
+        <div id="DivPrin">Jumpymals ®</div>
+        <div class="Div bot bot2"><a href="mapa.html">Jugar</a></div>
+        <div class="Div bot bot2"><a href="SeleccionPersonaje.html">Menu de personajes</a></div>
+        <div class="Div bot bot2"><a href="estadisticas.html">Logros</a></div>
+        <!-- <div class="loading show">
+            <div class="spin"></div>
+        </div> -->
+    </center>
+    <script>
+
+        var Loading = (loadingDelayHidden = 0) => {
+            let loading = null;
+            const myLoadingDelayHidden = loadingDelayHidden;
+            let imgs = [];
+            let lenImgs = 0;
+            let counterImgsLoading = 0;
+
+            function incrementCounterImgs() {
+                counterImgsLoading += 1;
+                if (counterImgsLoading === lenImgs) hideLoading();
+            }
+            function hideLoading() {
+                if (loading !== null) {
+                    loading.classList.remove('show');
+                    setTimeout(function () {
+                        loading.remove();
+                    }, myLoadingDelayHidden);
+                }
+
+            }
+
+            function init() {
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    loading = document.querySelector('.loading');
+                    imgs = Array.from(document.images);
+                    lenImgs = imgs.length;
+
+
+                    if (imgs.length === 0) {
+
+                        hideLoading();
+                    } else {
+
+                        imgs.forEach(function (img) {
+                            img.addEventListener('load', incrementCounterImgs, false);
+                        });
+                    }
+
+                    // sonido botones
+                    const click_audio = new Audio('../recursos/sounds/click.mp3');
+                    var botones_sonido = document.querySelectorAll('.bot');
+                    console.log(botones_sonido.length);
+                    botones_sonido.forEach(element => {
+                        element.addEventListener('click', () => {
+                            console.log(element);
+                            click_audio.play();
+                        });
+                    });
+                });
+            }
+            return {
+                'init': init
+            }
+        }
+        Loading(1000).init();
+
+
+    </script>
+</body>
+
+</html>

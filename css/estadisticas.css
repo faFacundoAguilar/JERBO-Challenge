@@ -1,0 +1,94 @@
+@font-face {
+    font-family:KeeponTruckin ;
+    src: url(../recursos/KeeponTruckin.ttf);
+}
+
+body {
+    background-color:rgb(236, 215, 232);
+    background-image: url('../recursos/jumpymals.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.titulo {
+    font-family:KeeponTruckin;
+    font-size:30px;
+    -webkit-text-stroke: .7px rgb(204 107 158);
+    text-shadow: 0.2em 0.2em 0.2em black, 0.2em 0.2em 0em rgba(204, 107, 159, 0.753);
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.estadisticas {
+    font-family:KeeponTruckin;
+    font-size: 18px;
+    display: inline-block;
+    text-align:left;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(250, 235, 215, 1);
+    padding: 50px;
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 15px;
+
+}
+
+.logros {
+    font-family:KeeponTruckin;
+    font-size: 14px;
+    display: inline-block;
+    text-align:left;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(250, 235, 215, 1);
+    padding: 50px;
+    margin-left: 110px;
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+    border-radius:15px;
+
+}
+
+#subtitulo1 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#subtitulo2 {
+    font-size: 16px;
+    font-weight: bolder;
+    
+}
+
+#subtitulo3 {
+    font-size: 16px;
+    font-weight: bolder;
+    
+}
+
+#subtitulo4 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#tituloestadisticas {
+    text-align:center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+
+}
+
+#titulologros {
+    text-align:center;
+    font-family: KeeponTruckin;
+    -webkit-text-stroke: .3px rgb(204 107 158);
+    font-size: 25px;
+}

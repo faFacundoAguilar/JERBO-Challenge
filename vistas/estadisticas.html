@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas</title>
+</head>
+<body>
+
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    <br>
+    <div class="titulo">
+        <center>
+            <h1>ESTADISTICAS Y LOGROS</h1>
+        </center>
+    </div>
+    <br>
+    <div class="tabla">
+
+        <div class="estadisticas">
+            <h2 id="tituloestadisticas">ESTADISTICAS:</h2> <br> <br>
+            Nivel maximo alcanzado: <span id="nivel_max"></span><br> <br> <br> <br>
+            Niveles totales superados: <span id="nivel_total"></span><br> <br> <br> <br> 
+            Numero de muertes: <span id="muertes"></span><br> <br> <br> <br>
+            Numero de monedas: <span id="monedas"></span><br> <br> <br> <br> <br>
+        </div>
+        <br><br><br>
+
+        <div class="logros">
+            <h2 id="titulologros">LOGROS:</h2><br>
+            <p id="subtitulo1"> Jugador experimentado:</p>
+            Alcanzar nivel 5 <br> <br> <br>
+            <p id="subtitulo2">Maestro del salto:</p>
+            Alcanzar nivel 10 <br> <br> <br>
+            <p id="subtitulo3">Contable: </p>
+            Conseguir 50 monedas <br> <br> <br>
+            <p id="subtitulo4">Cazafortunas:</p>
+            Conseguir 100 monedas
+
+        </div>
+    </div>
+
+    <script>
+        // salir 
+        document.addEventListener('keydown', (event) => {
+            if (event.key == 'Escape') {
+                window.location.href = 'MenuInicio.html';
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var muertes = document.getElementById('muertes');
+            var monedas = document.getElementById('monedas');
+            var nivel_max = document.getElementById('nivel_max');
+            var nivel_total = document.getElementById('nivel_total');
+            var datos = JSON.parse(localStorage.getItem('guardado'));
+            muertes.innerHTML = datos["muertes_totales"];
+            monedas.innerHTML = datos["monedas"];
+            nivel_max.innerHTML = datos["nivel_max"];
+            nivel_total.innerHTML = datos["niveles_superados"];
+        });
+    </script>
+
+</body>
+
+</html>
