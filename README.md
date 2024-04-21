@@ -16,3 +16,5 @@ Get ready for an exciting adventure, JERBOchallenge ATR! 👨‍💻✔️
 - CSS
 -Javascript
 -Blender
+- **Fecha del Proyecto**
+- 05/2023 📅
