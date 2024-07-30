@@ -11,7 +11,7 @@ An obstacle game developed with HTML, CSS, and JavaScript that I had as a projec
 - **Coin system:** Earn coins throughout the game and use them to unlock new and exciting characters. 💰✔️
 - **Conclusions:** JERBOchallenge was one of my first programming projects, making it a valuable learning experience to solidify foundations.
 Get ready for an exciting adventure, JERBOchallenge 🐭✔️
-## Tecnologías
+## TECHNOLOGIES
 - HTML
 - CSS
 -Javascript
