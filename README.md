@@ -12,8 +12,8 @@ An obstacle game developed with HTML, CSS, and JavaScript that I had as a projec
 - **Conclusions:** JERBOchallenge was one of my first programming projects, making it a valuable learning experience to solidify foundations.
 Get ready for an exciting adventure, JERBOchallenge 🐭
 ## TECHNOLOGIES
-- HTML
-- CSS
+- HTML5
+- CSS3
 -Javascript
 -Blender
 ### PROJECT DATE:
