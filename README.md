@@ -14,7 +14,8 @@ Get ready for an exciting adventure, JERBOchallenge 🐭
 ## TECHNOLOGIES
 - HTML5
 - CSS3
--Javascript
--Blender
+- JavaScript
+- Blender
+
 ### PROJECT DATE:
 - 05/2023 📅
