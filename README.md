@@ -3,19 +3,19 @@ https://github.com/faFacundoAguilar/JERBO-Challenge/assets/124779712/6b027858-52
 <img src="https://github.com/user-attachments/assets/e50e28e2-9e6a-4f71-8d00-6868d5424085" alt="present" width="400" hight="400" position="center"/>
 
 <h1 align="center">JERBOchallenge 🐭</h1>
+Un juego de obstáculos desarrollado con HTML, CSS y JavaScript que tuve como proyecto durante mi formación como desarrollador web. En este desafío, asumes el papel de un valiente jerboa que debe superar una serie de retos en un entorno desértico. Tendrás que usar tu habilidad para navegar y esquivar obstáculos a medida que avanzas por los diferentes niveles.
 
-A obstacle game developed with HTML, CSS, and JavaScript that I had as a project during my background as a web developer. In this challenge, you take on the role of a brave jerboa who must overcome a series of challenges in a desert environment. You'll need to use your skill to navigate and dodge obstacles as you progress through different levels.
 ### Key features:
 - **Obstacle game.** 🚀
 - **Multiple levels.** 🔥
-- **Coin system:** Earn coins throughout the game and use them to unlock new and exciting characters. 💰
-- **Conclusions:** JERBOchallenge was one of my first programming projects, making it a valuable learning experience to solidify foundations.
-Get ready for an exciting adventure, JERBOchallenge 🐭
-## TECHNOLOGIES
+- **Coin system:** Gana monedas a lo largo del juego y úsalas para desbloquear nuevos y emocionantes personajes. 💰
+
+Prepárate para una emocionante aventura, JERBOchallenge 🐭
+## TECNOLOGIAS
 - HTML5
 - CSS3
 - JavaScript
 - Blender
 
-### PROJECT DATE:
+### FECHA DEL PROYECTO:
 - 05/2023 📅
